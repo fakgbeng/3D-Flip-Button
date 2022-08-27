@@ -1,0 +1,42 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  perspective: 800px;
+}
+
+.btn {
+  position: relative;
+  height: 100px;
+  width: 300px;
+  transform-style: preserve-3d;
+  transform: translateZ(-75px);
+  transition: transform 0.3s ease-in-out;
+}
+.btn:hover {
+  transform: rotateX(-90deg) translateY(75px);
+}
+.side {
+  position: absolute;
+  display: flex;
+  backface-visibility: hidden;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  font-size: 3em;
+  font-weight: bold;
+}
+
+.default-side {
+  background-color: white;
+  border: 7px solid #069;
+  transform: translateZ(50px);
+}
+
+.hover-side {
+  background-color: #069;
+  color: white;
+  transform: rotateX(90deg) translateZ(50px);
+}
